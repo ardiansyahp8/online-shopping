@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "312efb32-5fa0-4dbf-b5aa-9356e3231790",
+		"name": "online-shopping",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Produk",
+			"item": [
+				{
+					"name": "Create Produk",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "full_description",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "price",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "category_id",
+									"value": "",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}produk/",
+							"host": [
+								"{{URL}}produk"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
