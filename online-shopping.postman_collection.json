@@ -18,32 +18,32 @@
 							"formdata": [
 								{
 									"key": "title",
-									"value": "",
+									"value": "Test",
 									"type": "default"
 								},
 								{
 									"key": "description",
-									"value": "",
+									"value": "lorem ipsum small",
 									"type": "default"
 								},
 								{
 									"key": "full_description",
-									"value": "",
+									"value": "lorem ipsum full",
 									"type": "default"
 								},
 								{
 									"key": "image",
 									"type": "file",
-									"src": []
+									"src": "/C:/Users/Administrator/Downloads/pexels-caio-64613.jpg"
 								},
 								{
 									"key": "price",
-									"value": "",
+									"value": "5000",
 									"type": "default"
 								},
 								{
 									"key": "category_id",
-									"value": "",
+									"value": "1",
 									"type": "default"
 								}
 							]
