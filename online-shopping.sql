@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 05, 2023 at 03:41 PM
+-- Generation Time: Jan 08, 2023 at 01:17 PM
 -- Server version: 8.0.30
--- PHP Version: 7.4.33
+-- PHP Version: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `online-shopping`
 --
-CREATE DATABASE IF NOT EXISTS `online-shopping` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
-USE `online-shopping`;
 
 -- --------------------------------------------------------
 
@@ -35,7 +33,14 @@ CREATE TABLE IF NOT EXISTS `kategoris` (
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `kategoris`
+--
+
+INSERT INTO `kategoris` (`id`, `name`, `createdAt`, `updatedAt`) VALUES
+(1, 'Footwear', '2023-01-08 13:03:31', '2023-01-08 13:03:31');
 
 -- --------------------------------------------------------
 

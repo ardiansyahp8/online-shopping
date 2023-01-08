@@ -9,8 +9,10 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 
 db.sequelize.sync({force: false})
-const produkRouter = require('./route/produk')
 
+const produkRouter = require('./route/produk')
 app.use('/produk', produkRouter)
+const kategoriRouter = require('./route/kategori')
+app.use('/kategori', kategoriRouter)
 
 module.exports = app
