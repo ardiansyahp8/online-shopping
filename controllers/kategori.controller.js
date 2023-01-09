@@ -41,6 +41,22 @@ exports.findAll = async (req, res) => {
     })
 }
 
+exports.findOne = async (req, res) => {
+    const id = req.params.id;
+    db.kategori.findOne({where: {id: id}}).then(result => {
+        res.send({
+            code: 200,
+            message: 'OK',
+            data: result
+        })
+    }).catch(err => {
+        res.status(500).send({
+            code: 500,
+            message: 'Gagal retrieve data'
+        })
+    })
+}
+
 exports.update = async (req, res) => {
     const id = req.params.id
 
