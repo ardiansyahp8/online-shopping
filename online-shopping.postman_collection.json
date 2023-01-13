@@ -18,7 +18,7 @@
 							"formdata": [
 								{
 									"key": "title",
-									"value": "Air Jordan",
+									"value": "Sample Title Validation 2",
 									"type": "default"
 								},
 								{
@@ -28,7 +28,7 @@
 								},
 								{
 									"key": "full_description",
-									"value": "lorem ipsum full",
+									"value": "",
 									"type": "default"
 								},
 								{
@@ -38,7 +38,7 @@
 								},
 								{
 									"key": "price",
-									"value": "450000",
+									"value": "100",
 									"type": "default"
 								},
 								{
