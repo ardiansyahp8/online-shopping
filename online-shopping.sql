@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 08, 2023 at 01:17 PM
+-- Generation Time: Jan 14, 2023 at 03:12 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `online-shopping`
 --
+CREATE DATABASE IF NOT EXISTS `online-shopping` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+USE `online-shopping`;
 
 -- --------------------------------------------------------
 
@@ -33,14 +35,15 @@ CREATE TABLE IF NOT EXISTS `kategoris` (
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `kategoris`
 --
 
 INSERT INTO `kategoris` (`id`, `name`, `createdAt`, `updatedAt`) VALUES
-(1, 'Footwear', '2023-01-08 13:03:31', '2023-01-08 13:03:31');
+(1, 'Footwear', '2023-01-08 13:03:31', '2023-01-08 13:03:31'),
+(3, 'Fashion', '2023-01-09 04:07:28', '2023-01-09 04:07:28');
 
 -- --------------------------------------------------------
 
@@ -62,6 +65,17 @@ CREATE TABLE IF NOT EXISTS `produks` (
   PRIMARY KEY (`id`),
   KEY `category_id` (`category_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `produks`
+--
+
+INSERT INTO `produks` (`id`, `title`, `description`, `full_description`, `image`, `price`, `url`, `createdAt`, `updatedAt`, `category_id`) VALUES
+('30c40cd1-30c1-486a-a833-cb5eb4e6a7f2', 'Aerostreet', 'lorem ipsum small', 'lorem ipsum full', '1673232407569_pexels-caio-64613.jpg', 150000, NULL, '2023-01-09 02:46:47', '2023-01-09 02:46:47', 1),
+('46d1f80c-a463-42a2-b990-97d32ea0c07b', 'Sample Title Validation 2', 'lorem ipsum small', '', '1673595114391_pexels-caio-64613.jpg', 100, 'sample-title-validation-2-04391899099880652', '2023-01-13 07:31:54', '2023-01-13 07:31:54', 1),
+('59523d79-1d2e-4e5d-9f2a-db30017108a7', 'Adidas', 'lorem ipsum small', 'lorem ipsum full', '1673232288895_pexels-caio-64613.jpg', 500000, NULL, '2023-01-09 02:44:48', '2023-01-09 03:36:59', 1),
+('79446e4a-5414-459b-8e67-58d4d6e0a15f', 'Air Jordan', 'lorem ipsum small', 'lorem ipsum full', '1673235871384_pexels-caio-64613.jpg', 450000, 'air-jordan-07918068166129246', '2023-01-09 03:44:31', '2023-01-09 03:44:31', 1),
+('cefa9e83-c401-4421-9662-958c5b2d2c96', 'Sample Title Validation', 'lorem ipsum small', 'lorem ipsum full', '1673594865845_pexels-caio-64613.jpg', 100, 'sample-title-validation-02794527631234289', '2023-01-13 07:27:45', '2023-01-13 07:27:45', 1);
 
 --
 -- Constraints for dumped tables
