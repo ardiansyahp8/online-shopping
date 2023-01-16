@@ -26,3 +26,31 @@ exports.getProdukHome = async (req, res) => {
         })
     })
 }
+
+exports.cariProduk = async (req, res) => {
+    const keyword = req.query.keyword
+
+    db.produk.findAll({
+        where: {
+            title: {[Op.like] : '%' + keyword + '%'}
+        }
+    }).then(result => {
+        if (result.length > 0) {
+            res.send({
+                code: 200,
+                message: 'OK',
+                data: result
+            })
+        } else {
+            res.status(404).send({
+                code: 404,
+                message: `Tidak ada data yang cocok dengan keyword '${keyword}'`
+            })
+        }
+    }).catch(err => {
+        res.status(500).send({
+            code: 500,
+            message: 'Error Find Data > ' + err
+        })
+    })
+}
