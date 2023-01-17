@@ -306,6 +306,34 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Frontend",
+			"item": [
+				{
+					"name": "Produk Page",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}frontend/?keyword=nike",
+							"host": [
+								"{{URL}}frontend"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "nike"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	],
 	"event": [

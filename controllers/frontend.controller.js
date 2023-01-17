@@ -27,13 +27,16 @@ exports.getProdukHome = async (req, res) => {
     })
 }
 
-exports.cariProduk = async (req, res) => {
-    const keyword = req.query.keyword
+exports.getProdukPage = async (req, res) => {
+    let keyword = ''
+    const condition = []
+    if (req.query.keyword) {
+        keyword = req.query.keyword
+        condition.push({title: { [Op.like]: '%' + keyword + '%' }})
+    }
 
     db.produk.findAll({
-        where: {
-            title: {[Op.like] : '%' + keyword + '%'}
-        }
+        where: condition
     }).then(result => {
         if (result.length > 0) {
             res.send({
