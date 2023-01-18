@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 14, 2023 at 03:12 AM
+-- Generation Time: Jan 18, 2023 at 12:47 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -29,13 +29,12 @@ USE `online-shopping`;
 -- Table structure for table `kategoris`
 --
 
-CREATE TABLE IF NOT EXISTS `kategoris` (
-  `id` int NOT NULL AUTO_INCREMENT,
+CREATE TABLE `kategoris` (
+  `id` int NOT NULL,
   `name` varchar(255) DEFAULT NULL,
   `createdAt` datetime NOT NULL,
-  `updatedAt` datetime NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `updatedAt` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `kategoris`
@@ -51,7 +50,7 @@ INSERT INTO `kategoris` (`id`, `name`, `createdAt`, `updatedAt`) VALUES
 -- Table structure for table `produks`
 --
 
-CREATE TABLE IF NOT EXISTS `produks` (
+CREATE TABLE `produks` (
   `id` varchar(255) NOT NULL,
   `title` varchar(255) DEFAULT NULL,
   `description` varchar(255) DEFAULT NULL,
@@ -61,9 +60,7 @@ CREATE TABLE IF NOT EXISTS `produks` (
   `url` varchar(255) DEFAULT NULL,
   `createdAt` datetime NOT NULL,
   `updatedAt` datetime NOT NULL,
-  `category_id` int DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `category_id` (`category_id`)
+  `category_id` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -76,6 +73,33 @@ INSERT INTO `produks` (`id`, `title`, `description`, `full_description`, `image`
 ('59523d79-1d2e-4e5d-9f2a-db30017108a7', 'Adidas', 'lorem ipsum small', 'lorem ipsum full', '1673232288895_pexels-caio-64613.jpg', 500000, NULL, '2023-01-09 02:44:48', '2023-01-09 03:36:59', 1),
 ('79446e4a-5414-459b-8e67-58d4d6e0a15f', 'Air Jordan', 'lorem ipsum small', 'lorem ipsum full', '1673235871384_pexels-caio-64613.jpg', 450000, 'air-jordan-07918068166129246', '2023-01-09 03:44:31', '2023-01-09 03:44:31', 1),
 ('cefa9e83-c401-4421-9662-958c5b2d2c96', 'Sample Title Validation', 'lorem ipsum small', 'lorem ipsum full', '1673594865845_pexels-caio-64613.jpg', 100, 'sample-title-validation-02794527631234289', '2023-01-13 07:27:45', '2023-01-13 07:27:45', 1);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `kategoris`
+--
+ALTER TABLE `kategoris`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `produks`
+--
+ALTER TABLE `produks`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `category_id` (`category_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `kategoris`
+--
+ALTER TABLE `kategoris`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
