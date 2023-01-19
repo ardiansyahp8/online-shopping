@@ -57,3 +57,7 @@ exports.getProdukPage = async (req, res) => {
         })
     })
 }
+
+exports.getProdukPage = async (req, res) => {
+    const id = req.params.id;
+}
