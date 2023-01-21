@@ -21,3 +21,11 @@ To Start Server:
 To Visit App:
 
 `localhost:3000/online-shopping`
+
+## Requirements
+
+1. Multer
+
+2. Joi
+
+...
