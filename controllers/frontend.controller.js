@@ -64,5 +64,9 @@ exports.getProdukDetil = async (req, res) => {
     db.Produk.detail({
     }).then({
     }).catch(err => {
+        res.status(500).send({
+            code:500,
+            message: 'Error Find Data > ' + err
+        })
     })
 }
