@@ -28,4 +28,6 @@ To Visit App:
 
 2. Joi
 
+3. Express Sequelize
+
 ...
