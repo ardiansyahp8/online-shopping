@@ -69,6 +69,11 @@ exports.getProdukDetil = async (req, res) => {
                 message: 'OK',
                 data: result
             })
+        } else {
+            res.status(404).send({
+                code: 404,
+                message: `Produk tidak ditemukan'`
+            })
         }
     }).catch(err => {
         res.status(500).send({
