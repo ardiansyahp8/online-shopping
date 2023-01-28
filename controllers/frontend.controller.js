@@ -72,7 +72,7 @@ exports.getProdukDetil = async (req, res) => {
         } else {
             res.status(404).send({
                 code: 404,
-                message: `Produk tidak ditemukan'`
+                message: `Produk tidak ditemukan`
             })
         }
     }).catch(err => {

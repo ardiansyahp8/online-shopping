@@ -46,7 +46,7 @@ exports.findAll = async (req, res) => {
     }).catch(err => {
         res.status(500).send({
             code: 500,
-            message: 'Gagal retrieve data'
+            message: 'Gagal retrieve all data'
         })
     })
 }
