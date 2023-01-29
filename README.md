@@ -30,4 +30,6 @@ To Visit App:
 
 3. Express Sequelize
 
+Built with : NodeJS, ReactJS
+
 ...
