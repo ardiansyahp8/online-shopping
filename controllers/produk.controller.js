@@ -12,7 +12,7 @@ exports.create = async (req, res) => {
         price: req.body.price,
         image: req.file.filename,
         category_id: req.body.category_id,
-        url: func.convertToSlug(req.body.title+" "+Math.random(1000))
+        url: func.convertToSlug(req.body.title + " " + Math.random(1000))
     }
 
     db.produk.create(data).then(result => {
