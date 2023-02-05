@@ -72,6 +72,7 @@ exports.update = async (req, res) => {
     const id = req.params.id
     
     const data = {
+        id: uuidv4(),
         title: req.body.title,
         description: req.body.description,
         full_description: req.body.full_description,
