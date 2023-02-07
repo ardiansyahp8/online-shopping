@@ -17,5 +17,7 @@ app.use('/kategori', kategoriRouter)
 
 const frontendRouter = require('./route/frontend')
 app.use('/frontend', frontendRouter)
+const databaseRouter = require('./route/database')
+app.use('/database', databaseRouter)
 
 module.exports = app
