@@ -46,7 +46,7 @@ exports.findAll = async (req, res) => {
     }).catch(err => {
         res.status(500).send({
             code: 500,
-            message: 'Gagal retrieve all data'
+            message: 'Gagal retrieve data'
         })
     })
 }
@@ -72,7 +72,6 @@ exports.update = async (req, res) => {
     const id = req.params.id
     
     const data = {
-        id: uuidv4(),
         title: req.body.title,
         description: req.body.description,
         full_description: req.body.full_description,

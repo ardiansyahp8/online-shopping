@@ -58,53 +58,6 @@ exports.getProdukPage = async (req, res) => {
     })
 }
 
-exports.getProdukDetil = async (req, res) => {
-    const id = req.params.id
-
-    db.Produk.detail({
-    }).then(result => {
-        if (result.length > 0) {
-            res.send({
-                code: 200,
-                message: 'OK',
-                data: result
-            })
-        } else {
-            res.status(404).send({
-                code: 404,
-                message: `Produk tidak ditemukan`
-            })
-        }
-    }).catch(err => {
-        res.status(500).send({
-            code:500,
-            message: 'Error Find Data > ' + err
-        })
-    })
-}
-
-exports.searchProduk = async (req, res) => {
-    const id = req.params.id
-    const searchParam = req.params.search
-
-    db.Produk.detail({
-    }).then(result => {
-        if (result.length > 0) {
-            res.send({
-                code: 200,
-                message: 'OK',
-                data: result
-            })
-        } else {
-            res.status(404).send({
-                code: 404,
-                message: `Produk tidak ditemukan`
-            })
-        }
-    }).catch(err => {
-        res.status(500).send({
-            code:500,
-            message: 'Error Find Data > ' + err
-        })
-    })
+exports.getProdukPage = async (req, res) => {
+    const id = req.params.id;
 }
